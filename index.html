@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý chi tiêu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Quản lý chi tiêu</h1>
+
+    <main>
+      <header>
+        <div>
+          <h5>tổng thu chi</h5>
+          <span id="balance">$0.00</span>
+        </div>
+        <div>
+          <h5>Thu nhập</h5>
+          <span id="income">$0.00</span>
+        </div>
+        <div>
+          <h5>Chi tiêu</h5>
+          <span id="expense">$0.00</span>
+        </div>
+      </header>
+
+      <section>
+        <h3>Lịch sử giao dịch</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+
+      <section>
+        <h3>Thêm giao dịch</h3>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+                <span>Chi tiêu</span>
+                <span>thu nhập</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Tên (ghi đầy đủ)</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label for="amount">Số tiền</label>
+            <input
+              type="number"
+              name="amount"
+              value="0"
+              min="0.01"
+              step="0.01"
+              required
+            />
+          </div>
+          <div>
+            <label for="date">Ngày giao dịch</label>
+            <input type="date" name="date" required />
+          </div>
+          <button type="submit">ok</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
